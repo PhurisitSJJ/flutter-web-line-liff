@@ -4,17 +4,17 @@ import 'package:flutter_line/screen/login_screen.dart';
 import 'package:flutter_line_sdk/flutter_line_sdk.dart';
 
 class HomeWebScreen extends StatelessWidget {
-  final String displayName;
-  final String pictureUrl;
-  final String userId;
-  final String accessToken;
+  // final String displayName;
+  // final String pictureUrl;
+  // final String userId;
+  // final String accessToken;
 
   const HomeWebScreen({
     super.key,
-    required this.displayName,
-    required this.pictureUrl,
-    required this.userId,
-    required this.accessToken,
+    // required this.displayName,
+    // required this.pictureUrl,
+    // required this.userId,
+    // required this.accessToken,
   });
 
   void logout(BuildContext context) async {
@@ -42,19 +42,19 @@ class HomeWebScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            pictureUrl.isNotEmpty
-                ? CircleAvatar(
-                    radius: 50,
-                    backgroundImage: NetworkImage(pictureUrl),
-                  )
-                : const Icon(Icons.account_circle, size: 100),
-            const SizedBox(height: 10),
-            Text("ชื่อ: $displayName", style: const TextStyle(fontSize: 20)),
-            const Divider(),
-            Text("User ID: $userId", style: const TextStyle(fontSize: 12)),
-            const Divider(),
-            Text("accessToken: $accessToken",
-                style: const TextStyle(fontSize: 12)),
+            // pictureUrl.isNotEmpty
+            //     ? CircleAvatar(
+            //         radius: 50,
+            //         backgroundImage: NetworkImage(pictureUrl),
+            //       )
+            //     : const Icon(Icons.account_circle, size: 100),
+            // const SizedBox(height: 10),
+            // Text("ชื่อ: $displayName", style: const TextStyle(fontSize: 20)),
+            // const Divider(),
+            // Text("User ID: $userId", style: const TextStyle(fontSize: 12)),
+            // const Divider(),
+            // Text("accessToken: $accessToken",
+            //     style: const TextStyle(fontSize: 12)),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {

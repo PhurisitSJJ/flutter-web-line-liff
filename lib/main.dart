@@ -8,7 +8,7 @@ void main() {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginWebScreen(),
-        '/home': (context) => HomeWebScreen(displayName: '', pictureUrl: '', userId: '', accessToken: '',),
+        '/home': (context) => HomeWebScreen(),
       },
     ));
 }

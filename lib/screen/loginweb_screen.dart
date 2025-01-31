@@ -37,10 +37,10 @@ class _LoginWebScreenState extends State<LoginWebScreen> {
         context,
         MaterialPageRoute(
             builder: (context) => HomeWebScreen(
-                  displayName: '${userInfo?.displayName}',
-                  pictureUrl: '${userInfo?.pictureUrl}',
-                  userId: '${userInfo?.userId}',
-                  accessToken: '${accessToken}',
+                  // displayName: '${userInfo?.displayName}',
+                  // pictureUrl: '${userInfo?.pictureUrl}',
+                  // userId: '${userInfo?.userId}',
+                  // accessToken: '${accessToken}',
                 )),
       );
     } else {
