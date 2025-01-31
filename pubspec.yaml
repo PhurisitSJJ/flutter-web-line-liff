@@ -1,0 +1,36 @@
+name: flutter_line
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+# Dependency
+dependencies:
+  flutter:
+    sdk: flutter
+  # Line LIFF
+  flutter_line_liff: ^0.0.3
+  # Lis SDK (Login)
+  flutter_line_sdk: ^2.4.0
+  # URL lancher
+  url_launcher: ^6.3.1
+  # JS
+  js: ^0.6.3
+  # Dot env
+  flutter_dotenv: ^5.2.1
+
+  cupertino_icons: ^1.0.6
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/env
+  uses-material-design: true
