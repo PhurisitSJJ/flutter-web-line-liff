@@ -1,0 +1,227 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flutter_line"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\debug\AndroidManifest.xml:6:5-66
+15-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\debug\AndroidManifest.xml:6:22-64
+16    <!--
+17     Required to query activities that can process text, see:
+18         https://developer.android.com/training/package-visibility?hl=en and
+19         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+20
+21         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+22    -->
+23    <queries>
+23-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:48:5-53:15
+24        <intent>
+24-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:49:9-52:18
+25            <action android:name="android.intent.action.PROCESS_TEXT" />
+25-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:50:13-72
+25-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:50:21-70
+26
+27            <data android:mimeType="text/plain" />
+27-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:51:13-50
+27-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:51:19-48
+28        </intent>
+29
+30        <package android:name="jp.naver.line.android" />
+30-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:10:9-57
+30-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:10:18-54
+31
+32        <intent>
+32-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:12:9-18:18
+33            <action android:name="android.intent.action.VIEW" />
+33-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:13:13-65
+33-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:13:21-62
+34
+35            <category android:name="android.intent.category.BROWSABLE" />
+35-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:15:13-74
+35-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:15:23-71
+36
+37            <data android:scheme="https" />
+37-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:51:13-50
+38        </intent>
+39    </queries>
+40
+41    <permission
+41-->[androidx.core:core:1.10.1] C:\Users\66987\.gradle\caches\transforms-3\d5144e28d418a986092b0dfc02ac7d3f\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+42        android:name="com.example.flutter_line.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+42-->[androidx.core:core:1.10.1] C:\Users\66987\.gradle\caches\transforms-3\d5144e28d418a986092b0dfc02ac7d3f\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+43        android:protectionLevel="signature" />
+43-->[androidx.core:core:1.10.1] C:\Users\66987\.gradle\caches\transforms-3\d5144e28d418a986092b0dfc02ac7d3f\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+44
+45    <uses-permission android:name="com.example.flutter_line.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+45-->[androidx.core:core:1.10.1] C:\Users\66987\.gradle\caches\transforms-3\d5144e28d418a986092b0dfc02ac7d3f\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+45-->[androidx.core:core:1.10.1] C:\Users\66987\.gradle\caches\transforms-3\d5144e28d418a986092b0dfc02ac7d3f\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+46
+47    <application
+48        android:name="android.app.Application"
+49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+49-->[androidx.core:core:1.10.1] C:\Users\66987\.gradle\caches\transforms-3\d5144e28d418a986092b0dfc02ac7d3f\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+50        android:debuggable="true"
+51        android:extractNativeLibs="false"
+52        android:icon="@mipmap/ic_launcher"
+53        android:label="flutter_line"
+54        android:supportsRtl="true" >
+54-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:21:18-44
+55        <activity
+56            android:name="com.example.flutter_line.MainActivity"
+57            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+58            android:exported="true"
+59            android:hardwareAccelerated="true"
+60            android:launchMode="singleTop"
+61            android:theme="@style/LaunchTheme"
+62            android:windowSoftInputMode="adjustResize" >
+63
+64            <!--
+65                 Specifies an Android theme to apply to this Activity as soon as
+66                 the Android process has started. This theme is visible to the user
+67                 while the Flutter UI initializes. After that, this theme continues
+68                 to determine the Window background behind the Flutter UI.
+69            -->
+70            <meta-data
+71                android:name="io.flutter.embedding.android.NormalTheme"
+72                android:resource="@style/NormalTheme" />
+73
+74            <intent-filter>
+75                <action android:name="android.intent.action.MAIN" />
+76
+77                <category android:name="android.intent.category.LAUNCHER" />
+78            </intent-filter>
+79        </activity>
+80        <activity
+81            android:name="com.example.flutter_line.SchemeActivity"
+82            android:exported="true" >
+83            <intent-filter>
+84                <action android:name="android.intent.action.VIEW" />
+84-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:13:13-65
+84-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:13:21-62
+85
+86                <category android:name="android.intent.category.DEFAULT" />
+86-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:43:17-76
+86-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:43:27-73
+87                <category android:name="android.intent.category.BROWSABLE" />
+87-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:15:13-74
+87-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:15:23-71
+88
+89                <data
+89-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:51:13-50
+90                    android:host="llatutorial"
+91                    android:scheme="llatutorial" />
+92            </intent-filter>
+93        </activity>
+94        <!--
+95             Don't delete the meta-data below.
+96             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+97        -->
+98        <meta-data
+99            android:name="flutterEmbedding"
+100            android:value="2" />
+101
+102        <activity
+102-->[:url_launcher_android] C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+103            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+103-->[:url_launcher_android] C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+104            android:exported="false"
+104-->[:url_launcher_android] C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+105            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+105-->[:url_launcher_android] C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+106        <activity
+106-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:22:9-24:59
+107            android:name="com.linecorp.linesdk.openchat.ui.CreateOpenChatActivity"
+107-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:23:13-83
+108            android:theme="@style/AppTheme.NoActionBar" />
+108-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:24:13-56
+109        <!--
+110         "launchMode" of this activity must not be singleInstance and singleTask because, this is
+111         launched with using startActivityForResult().
+112         This activity must be stacked on same Activity Stack of the caller.
+113        -->
+114        <activity
+114-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:30:9-35:69
+115            android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationActivity"
+115-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:31:13-89
+116            android:configChanges="orientation|screenSize|keyboardHidden"
+116-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:32:13-74
+117            android:exported="false"
+117-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:33:13-37
+118            android:launchMode="singleTop"
+118-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:34:13-43
+119            android:theme="@style/LineSdk_AuthenticationActivity" />
+119-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:35:13-66
+120        <activity
+120-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:36:9-48:20
+121            android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationCallbackActivity"
+121-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:37:13-97
+122            android:configChanges="orientation|screenSize|keyboardHidden"
+122-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:38:13-74
+123            android:exported="true" >
+123-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:39:13-36
+124            <intent-filter>
+124-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:40:13-47:29
+125                <action android:name="android.intent.action.VIEW" />
+125-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:13:13-65
+125-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:13:21-62
+126
+127                <category android:name="android.intent.category.DEFAULT" />
+127-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:43:17-76
+127-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:43:27-73
+128                <category android:name="android.intent.category.BROWSABLE" />
+128-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:15:13-74
+128-->[com.linecorp.linesdk:linesdk:5.9.1] C:\Users\66987\.gradle\caches\transforms-3\2cd196f7bf6b71b51417620f6c33937f\transformed\jetified-linesdk-5.9.1\AndroidManifest.xml:15:23-71
+129
+130                <data android:scheme="lineauth" />
+130-->C:\NIM SEE SEANG\TEST-LINELIFF\flutter_line\android\app\src\main\AndroidManifest.xml:51:13-50
+131            </intent-filter>
+132        </activity>
+133
+134        <uses-library
+134-->[androidx.window:window:1.0.0-beta04] C:\Users\66987\.gradle\caches\transforms-3\05afbc50c9d5c51966c5374f153362bd\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+135            android:name="androidx.window.extensions"
+135-->[androidx.window:window:1.0.0-beta04] C:\Users\66987\.gradle\caches\transforms-3\05afbc50c9d5c51966c5374f153362bd\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+136            android:required="false" />
+136-->[androidx.window:window:1.0.0-beta04] C:\Users\66987\.gradle\caches\transforms-3\05afbc50c9d5c51966c5374f153362bd\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+137        <uses-library
+137-->[androidx.window:window:1.0.0-beta04] C:\Users\66987\.gradle\caches\transforms-3\05afbc50c9d5c51966c5374f153362bd\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+138            android:name="androidx.window.sidecar"
+138-->[androidx.window:window:1.0.0-beta04] C:\Users\66987\.gradle\caches\transforms-3\05afbc50c9d5c51966c5374f153362bd\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+139            android:required="false" />
+139-->[androidx.window:window:1.0.0-beta04] C:\Users\66987\.gradle\caches\transforms-3\05afbc50c9d5c51966c5374f153362bd\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+140
+141        <provider
+141-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\66987\.gradle\caches\transforms-3\c4657ccd6d40f14cdb4952b7c714a73b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+142            android:name="androidx.startup.InitializationProvider"
+142-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\66987\.gradle\caches\transforms-3\c4657ccd6d40f14cdb4952b7c714a73b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:27:13-67
+143            android:authorities="com.example.flutter_line.androidx-startup"
+143-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\66987\.gradle\caches\transforms-3\c4657ccd6d40f14cdb4952b7c714a73b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:28:13-68
+144            android:exported="false" >
+144-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\66987\.gradle\caches\transforms-3\c4657ccd6d40f14cdb4952b7c714a73b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:29:13-37
+145            <meta-data
+145-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\66987\.gradle\caches\transforms-3\c4657ccd6d40f14cdb4952b7c714a73b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+146                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+146-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\66987\.gradle\caches\transforms-3\c4657ccd6d40f14cdb4952b7c714a73b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+147                android:value="androidx.startup" />
+147-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\66987\.gradle\caches\transforms-3\c4657ccd6d40f14cdb4952b7c714a73b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+148        </provider>
+149        <provider
+149-->[com.squareup.picasso:picasso:2.8] C:\Users\66987\.gradle\caches\transforms-3\4408cfeeca496e8b26b737778f62a2b7\transformed\jetified-picasso-2.8\AndroidManifest.xml:8:9-11:40
+150            android:name="com.squareup.picasso.PicassoProvider"
+150-->[com.squareup.picasso:picasso:2.8] C:\Users\66987\.gradle\caches\transforms-3\4408cfeeca496e8b26b737778f62a2b7\transformed\jetified-picasso-2.8\AndroidManifest.xml:9:13-64
+151            android:authorities="com.example.flutter_line.com.squareup.picasso"
+151-->[com.squareup.picasso:picasso:2.8] C:\Users\66987\.gradle\caches\transforms-3\4408cfeeca496e8b26b737778f62a2b7\transformed\jetified-picasso-2.8\AndroidManifest.xml:10:13-72
+152            android:exported="false" />
+152-->[com.squareup.picasso:picasso:2.8] C:\Users\66987\.gradle\caches\transforms-3\4408cfeeca496e8b26b737778f62a2b7\transformed\jetified-picasso-2.8\AndroidManifest.xml:11:13-37
+153    </application>
+154
+155</manifest>
