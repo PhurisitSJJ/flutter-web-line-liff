@@ -19,6 +19,7 @@ class _LoginWebScreenState extends State<LoginWebScreen> {
   Future<void> loginWithLine() async {
     await dotenv.load(fileName: "env");
 
+    // เริ่มการเชื่อมต่อ LIFF
     await FlutterLineLiff().init(
       config: Config(liffId: dotenv.env['LIFF_ID'].toString()),
       successCallback: () {
@@ -29,24 +30,26 @@ class _LoginWebScreenState extends State<LoginWebScreen> {
       },
     );
 
-    if (FlutterLineLiff().isLoggedIn) {
+    // ถ้าผู้ใช้ยังไม่ได้ล็อกอิน
+    if (!FlutterLineLiff().isLoggedIn) {
+      FlutterLineLiff().login(
+        config: LoginConfig(
+          redirectUri: 'https://localhost:8080/', // เปลี่ยนเป็น URL ของคุณ
+        ),
+      );
+    } else {
+      // ถ้าผู้ใช้ล็อกอินแล้ว
       userInfo = await FlutterLineLiff().profile;
-      final String? accessToken = FlutterLineLiff().getAccessToken();
 
+      // ส่งข้อมูลไปยัง HomeWebScreen
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => HomeWebScreen(
-                  // displayName: '${userInfo?.displayName}',
-                  // pictureUrl: '${userInfo?.pictureUrl}',
-                  // userId: '${userInfo?.userId}',
-                  // accessToken: '${accessToken}',
-                )),
-      );
-    } else {
-      FlutterLineLiff().login(
-        config: LoginConfig(
-          redirectUri: 'https://localhost:8080/home', // เปลี่ยนเป็น URL ของคุณ
+          builder: (context) => HomeWebScreen(
+            // displayName: userInfo?.displayName ?? '',
+            // pictureUrl: userInfo?.pictureUrl ?? '',
+            // userId: userInfo?.userId ?? '',
+          ),
         ),
       );
     }
