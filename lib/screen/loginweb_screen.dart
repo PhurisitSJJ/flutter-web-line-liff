@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_line/screen/homeweb_screen.dart';
 import 'package:flutter_line_liff/flutter_line_liff.dart';
 
 class LoginWebScreen extends StatefulWidget {
@@ -30,12 +31,22 @@ class _LoginWebScreenState extends State<LoginWebScreen> {
 
     if (FlutterLineLiff().isLoggedIn) {
       userInfo = await FlutterLineLiff().profile;
-      print("User: ${userInfo?.displayName}");
+      final String? accessToken = FlutterLineLiff().getAccessToken();
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeWebScreen(
+                  displayName: '${userInfo?.displayName}',
+                  pictureUrl: '${userInfo?.pictureUrl}',
+                  userId: '${userInfo?.userId}',
+                  accessToken: '${accessToken}',
+                )),
+      );
     } else {
       FlutterLineLiff().login(
         config: LoginConfig(
-          redirectUri:
-              'http://localhost:8080/', // 🔹 เปลี่ยนเป็น URL ของคุณ
+          redirectUri: 'https://localhost:8080/home', // เปลี่ยนเป็น URL ของคุณ
         ),
       );
     }
