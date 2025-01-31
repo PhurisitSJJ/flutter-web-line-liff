@@ -4,7 +4,7 @@ import 'package:flutter_line/screen/loginweb_screen.dart';
 
 void main() {
   runApp(MaterialApp(
-      title: 'Named Routes Demo',
+      title: 'Flutter-Web Line Liff',
       initialRoute: '/',
       routes: {
         '/': (context) => LoginWebScreen(),
