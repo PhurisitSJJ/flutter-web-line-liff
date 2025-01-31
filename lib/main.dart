@@ -4,13 +4,33 @@ import 'package:flutter_line/screen/loginweb_screen.dart';
 
 void main() {
   runApp(MaterialApp(
-      title: 'Flutter-Web Line Liff',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => LoginWebScreen(),
-        '/home': (context) => HomeWebScreen(),
-      },
-    ));
+    title: 'Flutter-Web Line Liff',
+    initialRoute: '/',
+    routes: {
+      '/': (context) => LoginWebScreen(), // หน้า LoginWebScreen
+      '/home': (context) => HomeWebScreen(), // หน้า HomeWebScreen
+    },
+    // onGenerateRoute: (settings) {
+    //   if (settings.name == '/home') {
+    //     // ตรวจสอบ URL ที่มาพร้อมกับพารามิเตอร์
+    //     final uri = Uri.parse(settings.arguments as String);
+
+    //     if (uri.queryParameters.containsKey('code')) {
+    //       // ตรวจสอบพารามิเตอร์ code ที่ส่งมาจาก Line
+    //       final code = uri.queryParameters['code'];
+
+    //       // ส่งข้อมูลไปที่หน้า HomeWebScreen พร้อม code ที่ได้รับ
+    //       return MaterialPageRoute(
+    //         builder: (context) => HomeWebScreen(
+    //           // code: code ?? '',
+    //         ),
+    //       );
+    //     }
+    //   }
+
+    //   return null;
+    // },
+  ));
 }
 
 // class MainApp extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_line/screen/homeweb_screen.dart';
+// import 'package:flutter_line/screen/homeweb_screen.dart';
 import 'package:flutter_line_liff/flutter_line_liff.dart';
 
 class LoginWebScreen extends StatefulWidget {
@@ -19,7 +19,7 @@ class _LoginWebScreenState extends State<LoginWebScreen> {
   Future<void> loginWithLine() async {
     await dotenv.load(fileName: "env");
 
-    // เริ่มการเชื่อมต่อ LIFF
+    // เริ่มต้น LIFF SDK
     await FlutterLineLiff().init(
       config: Config(liffId: dotenv.env['LIFF_ID'].toString()),
       successCallback: () {
@@ -30,27 +30,21 @@ class _LoginWebScreenState extends State<LoginWebScreen> {
       },
     );
 
-    // ถ้าผู้ใช้ยังไม่ได้ล็อกอิน
+    // ตรวจสอบการเข้าสู่ระบบ
     if (!FlutterLineLiff().isLoggedIn) {
+      // ถ้ายังไม่ได้เข้าสู่ระบบให้ทำการล็อกอิน
       FlutterLineLiff().login(
         config: LoginConfig(
-          redirectUri: 'https://localhost:8080/', // เปลี่ยนเป็น URL ของคุณ
+          redirectUri: 'https://localhost:8080',
+          // redirectUri: 'https://localhost:8080/home',
         ),
       );
     } else {
-      // ถ้าผู้ใช้ล็อกอินแล้ว
+      // ถ้าเข้าสู่ระบบแล้วแล้ว
       userInfo = await FlutterLineLiff().profile;
-
-      // ส่งข้อมูลไปยัง HomeWebScreen
-      Navigator.pushReplacement(
+      Navigator.pushReplacementNamed(
         context,
-        MaterialPageRoute(
-          builder: (context) => HomeWebScreen(
-            // displayName: userInfo?.displayName ?? '',
-            // pictureUrl: userInfo?.pictureUrl ?? '',
-            // userId: userInfo?.userId ?? '',
-          ),
-        ),
+        '/home',
       );
     }
   }

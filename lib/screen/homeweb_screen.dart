@@ -10,7 +10,7 @@ class HomeWebScreen extends StatelessWidget {
   // final String accessToken;
 
   const HomeWebScreen({
-    super.key, required
+    super.key, required,
     // required this.displayName,
     // required this.pictureUrl,
     // required this.userId,
